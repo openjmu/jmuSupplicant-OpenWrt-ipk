@@ -1,0 +1,10 @@
+--- a/src/CMakeLists.txt
++++ b/src/CMakeLists.txt
+@@ -3,4 +3,5 @@ ADD_SUBDIRECTORY("mentohust_encryption")
+ SET(EXECUTABLE_OUTPUT_PATH "${PROJECT_BINARY_DIR}/bin")
+ SET(LIBRARY_OUTPUT_PATH "${PROJECT_BINARY_DIR}/lib")
+ ADD_EXECUTABLE("jmusupplicant" ${JMUSUPPLICANT_SRCS})
+-TARGET_LINK_LIBRARIES(jmusupplicant ${PCAP_LIBRARY} "mentohust_encryption")
+\ No newline at end of file
++TARGET_LINK_LIBRARIES(jmusupplicant ${PCAP_LIBRARY} "mentohust_encryption")
++install(TARGETS jmusupplicant RUNTIME DESTINATION bin)
